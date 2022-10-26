@@ -9,9 +9,17 @@ namespace FizzBuzz
         private readonly int seven = 7;
         public string FizzBuzzGame(int num)
         {
-            if (num % three == 0 && num % five == 0)
+            if (
+                (num % three == 0 && num % five == 0) ||
+                (num % three == 0 && num % seven == 0) ||
+                (num % seven == 0 && num % five == 0))
             {
                 return "FizzBuzz";
+            }
+
+            if (num % seven == 0)
+            {
+                return "Whizz";
             }
 
             if (num % five == 0)

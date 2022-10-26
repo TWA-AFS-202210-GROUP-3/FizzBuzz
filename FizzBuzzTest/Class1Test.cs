@@ -16,7 +16,7 @@ namespace FizzBuzzTest
             string res = class1.FizzBuzzGame(num);
 
             // then
-            Assert.Equal("1", res);
+            Assert.Equal(num.ToString(), res);
         }
 
         [Fact]
@@ -46,11 +46,24 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_FizzBuzz_when_input_num_multiple_of_three_and_five()
+        public void Should_return_Whizz_when_input_num_multiple_of_seven()
         {
             // given
             Class1 class1 = new Class1();
-            int num = 15;
+            int num = 7;
+            // when
+            string res = class1.FizzBuzzGame(num);
+
+            // then
+            Assert.Equal("Whizz", res);
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzz_when_input_num_multiple_of_two_special_num()
+        {
+            // given
+            Class1 class1 = new Class1();
+            int num = 30;
             // when
             string res = class1.FizzBuzzGame(num);
 
