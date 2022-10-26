@@ -12,7 +12,7 @@ namespace FizzBuzzTest
             // given
             FizzBuzz.FizzBuzz result = new FizzBuzz.FizzBuzz();
             // when
-            var number = result.CountOff(3);
+            var number = result.CountOff(18);
             // then
             Assert.Equal("Fizz", number);
         }
@@ -81,6 +81,28 @@ namespace FizzBuzzTest
             var number = result.CountOff(105);
             // then
             Assert.Equal("FizzBuzzWhizz", number);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_When_CountOff_Given_contain_Three()
+        {
+            // given
+            FizzBuzz.FizzBuzz result = new FizzBuzz.FizzBuzz();
+            // when
+            var number = result.CountOff(3);
+            // then
+            Assert.Equal("Fizz", number);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_When_CountOff_Given_Multiple_of_Noneof_Five_and_Seven_and_Three()
+        {
+            // given
+            FizzBuzz.FizzBuzz result = new FizzBuzz.FizzBuzz();
+            // when
+            var number = result.CountOff(2);
+            // then
+            Assert.Equal("2", number);
         }
     }
 }
