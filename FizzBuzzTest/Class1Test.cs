@@ -109,5 +109,18 @@ namespace FizzBuzzTest
             // then
             Assert.Equal("FizzBuzzWhizz", res);
         }
+
+        [Fact]
+        public void Should_return_Fizz_when_input_num_contains_three()
+        {
+            // given
+            Class1 class1 = new Class1();
+            int num = 13;
+            // when
+            string res = class1.FizzBuzzGame(num);
+
+            // then
+            Assert.Equal("Fizz", res);
+        }
     }
 }
