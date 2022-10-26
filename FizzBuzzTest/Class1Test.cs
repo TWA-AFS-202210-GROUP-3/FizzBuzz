@@ -63,7 +63,7 @@ namespace FizzBuzzTest
         {
             // given
             Class1 class1 = new Class1();
-            int num = 30;
+            int num = 35;
             // when
             string res = class1.FizzBuzzGame(num);
 
