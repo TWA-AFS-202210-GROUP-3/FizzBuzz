@@ -6,7 +6,11 @@ namespace FizzBuzz
     {
         public string Countoff(int number)
         {
-            if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) { return "FizzBuzzWhizz"; }
+            string str_num = number.ToString();
+            bool if_contain_3 = str_num.Contains("3");
+
+            if (if_contain_3) { return "Fizz"; }
+            else if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) { return "FizzBuzzWhizz"; }
             else if (number % 3 == 0 && number % 7 == 0) { return "FizzWhizz"; }
             else if (number % 5 == 0 && number % 7 == 0) { return "BuzzWhizz"; }
             else if (number % 3 == 0 && number % 5 == 0) { return "FizzBuzz"; }

@@ -77,7 +77,7 @@ namespace FizzBuzzTest
         public void Should_return_BuzzWhizz_when_countoff_given_number_of_multiple_of_5_and_7()
         {
             FizzBuzzWhizz class1 = new FizzBuzzWhizz();
-            int number = 35;
+            int number = 245;
             //when
             var result = class1.Countoff(number);
             //then
@@ -93,6 +93,17 @@ namespace FizzBuzzTest
             var result = class1.Countoff(number);
             //then
             Assert.Equal("FizzBuzzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_when_countoff_given_number_contains_3()
+        {
+            FizzBuzzWhizz class1 = new FizzBuzzWhizz();
+            int number = 30;
+            //when
+            var result = class1.Countoff(number);
+            //then
+            Assert.Equal("Fizz", result);
         }
     }
 }
