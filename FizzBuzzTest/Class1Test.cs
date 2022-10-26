@@ -59,11 +59,11 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_FizzBuzz_when_input_num_multiple_of_two_special_num()
+        public void Should_return_FizzBuzz_when_input_num_multiple_of_three_and_five()
         {
             // given
             Class1 class1 = new Class1();
-            int num = 35;
+            int num = 15;
             // when
             string res = class1.FizzBuzzGame(num);
 
