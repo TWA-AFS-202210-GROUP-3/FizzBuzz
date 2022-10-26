@@ -70,5 +70,44 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("FizzBuzz", result);
         }
+
+        [Fact]
+        public void Should_return_FizzWhizz_when_count_off_given_multiple_of_3_and_7()
+        {
+            //given
+            int number = 21;
+
+            //when
+            var result = new FizzBuzz.FizzBuzz().CountOff(number);
+
+            //then
+            Assert.Equal("FizzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_BuzzWhizz_when_count_off_given_multiple_of_5_and_7()
+        {
+            //given
+            int number = 35;
+
+            //when
+            var result = new FizzBuzz.FizzBuzz().CountOff(number);
+
+            //then
+            Assert.Equal("BuzzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzzWhizz_when_count_off_given_multiple_of_3_and_5_and_7()
+        {
+            //given
+            int number = 105;
+
+            //when
+            var result = new FizzBuzz.FizzBuzz().CountOff(number);
+
+            //then
+            Assert.Equal("FizzBuzzWhizz", result);
+        }
     }
 }
