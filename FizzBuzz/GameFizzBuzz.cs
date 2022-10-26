@@ -7,8 +7,7 @@ namespace FizzBuzz
     {
         public string CountOff(int number)
         {
-            string numberToString = number.ToString();
-            if (numberToString.Contains("3"))
+            if (number.ToString().Contains("3"))
             {
                 return "Fizz";
             }

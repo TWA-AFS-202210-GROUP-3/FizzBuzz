@@ -4,7 +4,7 @@ using Xunit;
 
 namespace FizzBuzzTest
 {
-    public class Class1Test
+    public class GameFizzBuzzTest
     {
         [Fact]
         public void Should_return_normal_number_when_count_off_given_normal_number()
@@ -114,7 +114,7 @@ namespace FizzBuzzTest
         public void Should_return_Fizz_when_count_off_given_a_number_contains_3()
         {
             //given
-            int number = 135;
+            int number = 130;
 
             //when
             var result = new FizzBuzz.FizzBuzz().CountOff(number);
