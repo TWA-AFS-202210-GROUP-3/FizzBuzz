@@ -2,7 +2,7 @@
 
 namespace FizzBuzz
 {
-    public class Class1
+    public class FizzBuzzWhizz
     {
         private readonly int three = 3;
         private readonly int five = 5;
