@@ -1,5 +1,6 @@
 using FizzBuzz;
 using Moq;
+using System;
 using Xunit;
 
 namespace FizzBuzzTest
@@ -100,9 +101,28 @@ namespace FizzBuzzTest
             // given
             FizzBuzz.FizzBuzz result = new FizzBuzz.FizzBuzz();
             // when
-            var number = result.CountOff(2);
+            var number = result.CountOff(1);
             // then
-            Assert.Equal("2", number);
+            Assert.Equal("1", number);
         }
+
+        [Fact]
+        public void Should_return_result_When_CountOff_Given_number_list()
+        {
+            // given
+            FizzBuzz.FizzBuzz result = new FizzBuzz.FizzBuzz();
+
+            int studentnum = 10;
+            string list = string.Empty;
+            for (int i = 1; i < studentnum; i++)
+            {
+                list += i;
+            }
+            // when
+            var outputresult = result.Result(list);
+            // then
+            Assert.Equal("1\n2\nFizz\n4\nBuzz\nFizz\nWhizz\n8\nFizz\nBuzz\n", outputresult);
+        }
+
     }
 }

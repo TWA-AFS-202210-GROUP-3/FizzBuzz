@@ -4,10 +4,12 @@ namespace FizzBuzz
 {
     public class FizzBuzz
     {
+        private string str;
+
         public string CountOff(int number)
         {
             string numtostring = number.ToString();
-            if (numtostring.Contains("3") || number % 3 == 0)
+            if (numtostring.Contains("3"))
             {
                 return "Fizz";
             }
@@ -18,6 +20,10 @@ namespace FizzBuzz
             else if ((number % 3 == 0 && number % 5 == 0) || (number % 5 == 0 && number % 7 == 0) || (number % 3 == 0 && number % 7 == 0))
             {
                 return "FizzBuzz";
+            }
+            else if (number % 3 == 0)
+            {
+                return "Fizz";
             }
             else if (number % 5 == 0)
             {
@@ -31,6 +37,16 @@ namespace FizzBuzz
             {
                 return numtostring;
             }
+        }
+
+        public string Result(string list)
+        {
+            for (int i = 1; i <= list.Length + 1; i++)
+            {
+                str += this.CountOff(i) + '\n';
+            }
+
+            return str;
         }
     }
 }
