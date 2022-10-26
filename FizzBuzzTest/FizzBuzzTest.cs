@@ -61,5 +61,19 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("Whizz", result);
         }
+
+        [Fact]
+        public void Should_return_Buzz_given_multiple_of_3_and_5()
+        {
+            //given
+            GameFizzBuzz game = new GameFizzBuzz();
+            int number = 15;
+
+            //when
+            var result = game.Countoff(number);
+
+            //then
+            Assert.Equal("FizzBuzz", result);
+        }
     }
 }
