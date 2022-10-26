@@ -118,6 +118,7 @@ namespace FizzBuzzTest
             {
                 list += i;
             }
+
             // when
             var outputresult = result.Result(list);
             // then
