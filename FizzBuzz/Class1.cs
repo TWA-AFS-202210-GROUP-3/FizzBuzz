@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace FizzBuzz
 {
@@ -6,7 +7,12 @@ namespace FizzBuzz
     {
         public string CountOff(int number)
         {
-            if (number % 105 == 0)
+            string numberToString = number.ToString();
+            if (numberToString.Contains("3"))
+            {
+                return "Fizz";
+            }
+            else if (number % 105 == 0)
             {
                 return "FizzBuzzWhizz";
             }
