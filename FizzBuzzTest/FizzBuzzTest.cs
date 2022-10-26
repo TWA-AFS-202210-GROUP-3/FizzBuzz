@@ -95,7 +95,7 @@ namespace FizzBuzzTest
         {
             //given
             GameFizzBuzz game = new GameFizzBuzz();
-            int number = 35;
+            int number = 70;
 
             //when
             var result = game.Countoff(number);
@@ -116,6 +116,20 @@ namespace FizzBuzzTest
 
             //then
             Assert.Equal("FizzBuzzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_given_numbers_contain_3()
+        {
+            //given
+            GameFizzBuzz game = new GameFizzBuzz();
+            int number = 13;
+
+            //when
+            var result = game.Countoff(number);
+
+            //then
+            Assert.Equal("Fizz", result);
         }
     }
 }

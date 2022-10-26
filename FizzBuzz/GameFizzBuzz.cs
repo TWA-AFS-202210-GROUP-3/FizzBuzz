@@ -7,23 +7,20 @@ namespace FizzBuzz
         public string Countoff(int number)
         {
             var result = string.Empty;
+            var numberAsString = number.ToString();
 
-            if (number % 3 == 0)
+            if (numberAsString.Contains('3'))
             {
-                result += "Fizz";
+                result = "Fizz";
+            }
+            else
+            {
+                result += number % 3 == 0 ? "Fizz" : string.Empty;
+                result += number % 5 == 0 ? "Buzz" : string.Empty;
+                result += number % 7 == 0 ? "Whizz" : string.Empty;
             }
 
-            if (number % 5 == 0)
-            {
-                result += "Buzz";
-            }
-
-            if (number % 7 == 0)
-            {
-                result += "Whizz";
-            }
-
-            return result.Length == 0 ? number.ToString() : result;
+            return result.Length == 0 ? numberAsString : result;
         }
     }
 }
