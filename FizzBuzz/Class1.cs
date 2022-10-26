@@ -4,9 +4,22 @@ namespace FizzBuzz
 {
     public class Class1
     {
+        private readonly int three = 3;
+        private readonly int five = 5;
+        private readonly int seven = 7;
         public string FizzBuzzGame(int num)
         {
-            if (num % 3 == 0)
+            if (num % three == 0 && num % five == 0)
+            {
+                return "FizzBuzz";
+            }
+
+            if (num % five == 0)
+            {
+                return "Buzz";
+            }
+
+            if (num % three == 0)
             {
                 return "Fizz";
             }
