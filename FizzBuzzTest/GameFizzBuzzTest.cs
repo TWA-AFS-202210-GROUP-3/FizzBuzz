@@ -88,7 +88,7 @@ namespace FizzBuzzTest
         public void Should_return_BuzzWhizz_when_count_off_given_multiple_of_5_and_7()
         {
             //given
-            int number = 35;
+            int number = 70;
 
             //when
             var result = new FizzBuzz.FizzBuzz().CountOff(number);
