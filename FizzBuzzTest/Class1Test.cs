@@ -46,6 +46,19 @@ namespace FizzBuzzTest
         }
 
         [Fact]
+        public void Should_return_Whizz_when_count_off_given_multiple_of_7()
+        {
+            //given
+            int number = 7;
+
+            //when
+            var result = new FizzBuzz.FizzBuzz().CountOff(number);
+
+            //then
+            Assert.Equal("Whizz", result);
+        }
+
+        [Fact]
         public void Should_return_FizzBuzz_when_count_off_given_multiple_of_3_and_5()
         {
             //given
