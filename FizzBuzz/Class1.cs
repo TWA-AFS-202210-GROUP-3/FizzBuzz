@@ -24,6 +24,11 @@ namespace FizzBuzz
                 return "FizzWhizz";
             }
 
+            if (num % five == 0 && num % seven == 0)
+            {
+                return "BuzzWhizz";
+            }
+
             if (num % seven == 0)
             {
                 return "Whizz";

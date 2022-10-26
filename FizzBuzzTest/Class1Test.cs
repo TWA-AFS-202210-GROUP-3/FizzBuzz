@@ -85,6 +85,19 @@ namespace FizzBuzzTest
         }
 
         [Fact]
+        public void Should_return_BuzzWhizz_when_input_num_multiple_of_five_and_seven()
+        {
+            // given
+            Class1 class1 = new Class1();
+            int num = 70;
+            // when
+            string res = class1.FizzBuzzGame(num);
+
+            // then
+            Assert.Equal("BuzzWhizz", res);
+        }
+
+        [Fact]
         public void Should_return_FizzBuzzWhizz_when_input_num_multiple_of_three_special_num()
         {
             // given
